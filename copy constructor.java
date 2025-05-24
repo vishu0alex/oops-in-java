@@ -24,8 +24,11 @@ public class Main {
         Product obj1 = new Product(5, 6);
         Product obj2 = new Product(obj1);  // ✅ Separate object with same values
 
-        obj2.x = 10;
+       
         obj1.pro();  // Unaffected: pro = 30
+        obj2.pro();  // Unaffected: pro = 30
+        
+        obj2.x = 10;
         obj2.pro();  // Changed: pro = 60
     }
 }
